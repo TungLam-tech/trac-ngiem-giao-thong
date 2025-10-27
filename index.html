@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trắc nghiệm giao thông</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <h1>Trắc nghiệm luật giao thông đường bộ Việt Nam</h1>
+        <main class="container">
+            <div class="block-question">
+                <span class="stt">Câu 1:</span>
+                <span class="question"
+                    >Người lái xe cơ giới có được uống rượu không?
+                </span>
+            </div>
+
+            <div class="block-answer">
+                <div class="choice">
+                    <span class="letter">A</span>
+                    <span class="text-choice">Không được phép </span>
+                </div>
+                <div class="choice">
+                    <span class="letter">B</span>
+                    <span class="text-choice">Được uống trong giới hạn</span>
+                </div>
+
+                <div class="choice">
+                    <span class="letter">C</span>
+                    <span class="text-choice">Uống thoải mãi</span>
+                </div>
+
+                <div class="choice">
+                    <span class="letter">D</span>
+                    <span class="text-choice">Nghiêm Cấm</span>
+                </div>
+            </div>
+            <p id="alert-correct-or-incorrect">Chinh xác</p>
+            <div class="block-btn">
+                <button id="next">Next</button>
+                <button id="show-result" hidden>Xem kết quả</button>
+            </div>
+            <div class="block-result" hidden>
+                <div class="messenger">Hoàn thành!</div>
+                <div class="score">33%</div>
+                <div class="para-score">
+                    Ban đã trả lời đúng <span id="numTrue">1 </span>trên
+                    <span id="total">4 </span>câu hỏi
+                </div>
+                <div class="conclusion">Ban da truot</div>
+                <button class="close btn-close">Thoát</button>
+            </div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
