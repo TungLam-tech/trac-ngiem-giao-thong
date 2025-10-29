@@ -1,100 +1,138 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: rgba(15, 15, 43);
-    color: white;
+  background-color: rgba(15, 15, 43);
+  color: white;
 }
 main {
-    max-width: 666px;
-    min-width: 320px;
-    height: auto;
-    background-color: rgba(46, 52, 53, 1);
-    margin: 0px auto;
-    padding: 35px;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    border-radius: 20px;
+  width: 450px;
+  height: auto;
+  background-color: rgb(87, 168, 182);
+  margin: 0px auto;
+  padding: 35px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-radius: 20px;
 }
 h1 {
-    width: 666px;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    color: rgba(250, 121, 121, 0);
+  width: 666px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: rgba(250, 121, 121, 0);
 }
 .choice {
-    background-color: rgba(15, 15, 43);
-    margin-top: 16px;
-    padding: 5px 10px;
-    border-radius: 40px;
+  background-color: rgba(15, 15, 43);
+  margin-top: 16px;
+  padding: 5px 10px;
+  border-radius: 40px;
 }
 .letter {
-    margin-right: 30px;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgb(131, 95, 28);
-    text-align: center;
+  margin-right: 30px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(131, 95, 28);
+  text-align: center;
 }
 .choice:hover,
 button:hover {
-    background-color: rgba(70, 16, 117, 1);
-    transition: 0.8s;
-    cursor: pointer;
+  background-color: rgba(70, 16, 117, 1);
+  transition: 0.8s;
+  cursor: pointer;
 }
 button {
-    margin-top: 20px;
-    width: 100px;
-    height: 45px;
-    border-radius: 20px;
-    background-color: rgb(15, 15, 43);
-    color: white;
-    border: none;
+  margin-top: 20px;
+  width: 100px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: rgb(15, 15, 43);
+  color: white;
+  border: none;
 }
 .block-btn {
-    width: inherit;
-    height: 85px;
-    text-align: center;
+  width: inherit;
+  height: 85px;
+  text-align: center;
 }
 .block-result {
-    background-color: rgba(201, 201, 221, 1);
-    width: 40%;
-    height: 250px;
-    border-radius: 20px;
-    text-align: center;
-    line-height: 3rem;
-    padding: 6px 0;
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: rgba(201, 201, 221, 1);
+  width: 40%;
+  height: 250px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 3rem;
+  padding: 6px 0;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
 }
 .score {
-    font-size: 3rem;
-    margin-top: 15px;
+  font-size: 3rem;
+  margin-top: 15px;
 }
 .para-score {
-    margin-top: 2px;
-    font-size: 0.9rem;
+  margin-top: 2px;
+  font-size: 0.9rem;
 }
 .btn-close {
-    background-color: brown;
+  background-color: rgb(15, 15, 43);
 }
 .green-correct {
-    background-color: rgba(102, 102, 253, 1);
-    transition: 0.5s;
+  background-color: rgba(102, 102, 253, 1);
+  transition: 0.5s;
 }
 .red-incorrect {
-    background-color: brown;
-    transition: 0.5s;
+  background-color: brown;
+  transition: 0.5s;
 }
 #alert-correct-or-incorrect {
-    text-align: center;
-    font-size: 1.3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 10px;
 }
 .hide {
-    display: none;
+  display: none;
 }
+
+.messenger,
+#score {
+  font-weight: 600;
+  font-size: 2rem;
+}
+#score {
+  font-weight: 600;
+  color: rgb(248, 8, 8);
+}
+
+.para-score {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+#numTrue {
+  color: rgb(0, 248, 41);
+}
+#total {
+  color: blue;
+}
+
+.image {
+  display: block;
+  margin: 5px auto;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+/* @media screen and (max-width: 678px) {
+  main {
+    max-width: 400px;
+    margin: 5px auto;
+  }
+} */

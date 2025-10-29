@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trình tạo bộ câu hỏi JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f8fafc;
+        color: #111;
+        padding: 20px;
+        max-width: 850px;
+        margin: auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      input,
+      textarea,
+      button,
+      select {
+        padding: 8px;
+        margin: 4px 0;
+        width: 100%;
+        font-size: 15px;
+      }
+      .question-block {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 15px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+      .answers {
+        margin-left: 10px;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        padding: 8px 12px;
+      }
+      button:hover {
+        background: #1d4ed8;
+      }
+      .danger {
+        background: #dc2626;
+      }
+      .danger:hover {
+        background: #b91c1c;
+      }
+      .secondary {
+        background: #6b7280;
+      }
+      .secondary:hover {
+        background: #4b5563;
+      }
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      #fileInput {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🧠 Tạo & Chỉnh sửa Bộ Câu Hỏi JSON</h1>
+
+    <div id="creator">
+      <label>Câu hỏi (tùy chọn):</label>
+      <textarea
+        id="question"
+        rows="2"
+        placeholder="Nhập nội dung câu hỏi (có thể bỏ trống)..."
+      ></textarea>
+
+      <label>Đường dẫn hình (mặc định ./image/...):</label>
+      <input
+        id="urlImage"
+        placeholder="1.jpg hoặc ./image/1.jpg"
+        oninput="if(!this.value.startsWith('./image/')) this.value = './image/' + this.value.replace('./image/','')"
+      />
+
+      <div class="answers">
+        <h3>Đáp án:</h3>
+        <div id="answers">
+          <input placeholder="Đáp án 1" class="answer" />
+          <input placeholder="Đáp án 2" class="answer" />
+          <input placeholder="Đáp án 3" class="answer" />
+          <input placeholder="Đáp án 4" class="answer" />
+        </div>
+        <label>Chọn đáp án đúng (1–4):</label>
+        <input type="number" id="correct" min="1" max="4" value="1" />
+      </div>
+
+      <button id="add">➕ Thêm câu hỏi</button>
+    </div>
+
+    <hr />
+
+    <h2>Bộ câu hỏi hiện tại</h2>
+    <div id="questionList"></div>
+
+    <div class="toolbar">
+      <button id="download">⬇️ Tải file JSON</button>
+      <button id="upload" class="secondary">📤 Tải lên file JSON</button>
+      <input type="file" id="fileInput" accept=".json" />
+      <button id="clear" class="danger">🗑️ Xóa toàn bộ</button>
+    </div>
+
+    <script>
+      const questionListEl = document.getElementById("questionList");
+      const fileInput = document.getElementById("fileInput");
+      const storageKey = "quizData";
+      let data = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+      function saveToLocal() {
+        localStorage.setItem(storageKey, JSON.stringify(data, null, 4));
+      }
+
+      // --- Hiển thị danh sách câu hỏi ---
+      function renderList() {
+        questionListEl.innerHTML = "";
+        if (data.length === 0) {
+          questionListEl.innerHTML = "<i>Chưa có câu hỏi nào...</i>";
+          return;
+        }
+        data.forEach((q, i) => {
+          const div = document.createElement("div");
+          div.className = "question-block";
+          div.innerHTML = `
+                    <b>${i + 1}. ${
+            q.question || "(Không có nội dung câu hỏi)"
+          }</b><br>
+                    <small>Ảnh: ${q.urlImage || "(Không có)"}</small><br>
+                    <ul>
+                        ${q.answers
+                          .map(
+                            (a, idx) =>
+                              `<li ${
+                                a.correct
+                                  ? 'style="color:green;font-weight:bold"'
+                                  : ""
+                              }>
+                                        ${idx + 1}. ${a.answer}
+                                    </li>`
+                          )
+                          .join("")}
+                    </ul>
+                `;
+          questionListEl.appendChild(div);
+        });
+      }
+      renderList();
+
+      // --- Thêm câu hỏi ---
+      document.getElementById("add").onclick = () => {
+        const question = document.getElementById("question").value.trim();
+        let urlImage = document.getElementById("urlImage").value.trim();
+
+        if (urlImage && !urlImage.startsWith("./image/")) {
+          urlImage = "./image/" + urlImage;
+        }
+
+        const correctIndex =
+          parseInt(document.getElementById("correct").value) - 1;
+
+        const answers = Array.from(document.querySelectorAll(".answer")).map(
+          (el, i) => ({
+            answer: el.value.trim(),
+            correct: i === correctIndex,
+          })
+        );
+
+        if (answers.some((a) => !a.answer)) {
+          alert("Vui lòng nhập đủ 4 đáp án.");
+          return;
+        }
+
+        const newQuestion = {
+          numberOrder: data.length + 1,
+          question: question || "",
+          urlImage: urlImage || "",
+          answers,
+        };
+        data.push(newQuestion);
+        saveToLocal();
+        renderList();
+
+        // Reset form
+        document.getElementById("question").value = "";
+        document.getElementById("urlImage").value = "";
+        document.querySelectorAll(".answer").forEach((a) => (a.value = ""));
+      };
+
+      // --- Tải xuống file JSON ---
+      document.getElementById("download").onclick = () => {
+        if (data.length === 0) {
+          alert("Không có dữ liệu để tải xuống!");
+          return;
+        }
+        const blob = new Blob([JSON.stringify(data, null, 4)], {
+          type: "application/json",
+        });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "quizData.json";
+        a.click();
+      };
+
+      // --- Xóa toàn bộ ---
+      document.getElementById("clear").onclick = () => {
+        if (confirm("Bạn có chắc muốn xóa toàn bộ dữ liệu?")) {
+          data = [];
+          localStorage.removeItem(storageKey);
+          renderList();
+        }
+      };
+
+      // --- Tải lên file JSON ---
+      document.getElementById("upload").onclick = () => fileInput.click();
+
+      fileInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const imported = JSON.parse(event.target.result);
+            if (!Array.isArray(imported)) throw new Error("File không hợp lệ!");
+            if (confirm("Thêm dữ liệu từ file này vào danh sách hiện có?")) {
+              data = data.concat(imported);
+            } else {
+              data = imported;
+            }
+            saveToLocal();
+            renderList();
+            alert("✅ Đã tải file JSON thành công!");
+          } catch (err) {
+            alert("❌ Lỗi: File không đúng định dạng JSON.");
+          }
+        };
+        reader.readAsText(file);
+        e.target.value = "";
+      });
+    </script>
+  </body>
+</html>
