@@ -7,18 +7,16 @@ body {
   color: white;
 }
 main {
-  width: 450px;
+  width: 60vw;
   height: auto;
-  background-color: rgb(87, 168, 182);
+  background-color: rgb(37, 72, 78);
   margin: 0px auto;
-  padding: 35px;
+  padding: 20px 35px;
   font-size: 1.5rem;
   line-height: 2rem;
   border-radius: 20px;
 }
 h1 {
-  width: 666px;
-  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -29,6 +27,7 @@ h1 {
   margin-top: 16px;
   padding: 5px 10px;
   border-radius: 40px;
+  display: flex;
 }
 .letter {
   margin-right: 30px;
@@ -61,16 +60,14 @@ button {
 }
 .block-result {
   background-color: rgba(201, 201, 221, 1);
-  width: 40%;
+  width: 40vw;
   height: 250px;
   border-radius: 20px;
   text-align: center;
   line-height: 3rem;
   padding: 6px 0;
   color: black;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 80px;
+  margin: 5px auto 50px auto;
 }
 .score {
   font-size: 3rem;
@@ -81,6 +78,7 @@ button {
   font-size: 0.9rem;
 }
 .btn-close {
+  bottom: -50%;
   background-color: rgb(15, 15, 43);
 }
 .green-correct {
@@ -107,7 +105,6 @@ button {
 }
 #score {
   font-weight: 600;
-  color: rgb(248, 8, 8);
 }
 
 .para-score {
@@ -116,18 +113,19 @@ button {
 }
 
 #numTrue {
-  color: rgb(0, 248, 41);
+  color: rgb(0, 14, 216);
 }
 #total {
-  color: blue;
+  color: rgb(228, 10, 10);
 }
 
 .image {
   display: block;
   margin: 5px auto;
-  width: 400px;
+  width: 100%;
   height: 200px;
   margin-bottom: 50px;
+  object-fit: scale-down;
 }
 
 /* @media screen and (max-width: 678px) {

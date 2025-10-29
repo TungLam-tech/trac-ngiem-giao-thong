@@ -28,7 +28,7 @@ const data = [
   {
     numberOrder: 2,
     question: "",
-    urlImage: "./image/312.png",
+    urlImage: "./image/305.png",
     answers: [
       {
         answer: "Biển 1 và 2",
@@ -117,8 +117,124 @@ const data = [
       },
     ],
   },
+  {
+    numberOrder: 6,
+    question: "",
+    urlImage: "./image/372.png",
+    answers: [
+      {
+        answer: "Biển 1",
+        correct: false,
+      },
+      {
+        answer: "Biển 1 và 3",
+        correct: false,
+      },
+      {
+        answer: "Biển 3",
+        correct: true,
+      },
+      {
+        answer: "Cả ba biển",
+        correct: false,
+      },
+    ],
+  },
+  {
+    numberOrder: 7,
+    question: "",
+    urlImage: "./image/387.png",
+    answers: [
+      {
+        answer: "Biển 1 và 3",
+        correct: false,
+      },
+      {
+        answer: "Biển 2",
+        correct: true,
+      },
+      {
+        answer: "Biển 3",
+        correct: false,
+      },
+      {
+        answer: "Không biển nào",
+        correct: false,
+      },
+    ],
+  },
+  {
+    numberOrder: 8,
+    question: "",
+    urlImage: "./image/396.png",
+    answers: [
+      {
+        answer: "Biển 1",
+        correct: false,
+      },
+      {
+        answer: "Biển 2",
+        correct: true,
+      },
+      {
+        answer: "Biển 3",
+        correct: false,
+      },
+      {
+        answer: "Cả 3 biển",
+        correct: false,
+      },
+    ],
+  },
+  {
+    numberOrder: 9,
+    question: "",
+    urlImage: "./image/432.png",
+    answers: [
+      {
+        answer: "Biển 1",
+        correct: true,
+      },
+      {
+        answer: "Biển 2",
+        correct: false,
+      },
+      {
+        answer: ".",
+        correct: false,
+      },
+      {
+        answer: ".",
+        correct: false,
+      },
+    ],
+  },
+  {
+    numberOrder: 10,
+    question: "",
+    urlImage: "./image/435.png",
+    answers: [
+      {
+        answer: "Chỉ hướng đi phải theo",
+        correct: false,
+      },
+      {
+        answer:
+          "Biển báo hiệu cho người lái xe biết số lượng làn đường trên mặt đường và hướng đi trên mỗi làn đường phải theo",
+        correct: true,
+      },
+      {
+        answer: "Chỉ hướng đường phải theo",
+        correct: false,
+      },
+      {
+        answer: ".",
+        correct: false,
+      },
+    ],
+  },
 ];
-let score = 0;
+
 const blockQuestion = $(".block-question");
 const blockChoice = $$(".choice");
 const showResultBtn = $("#show-result");
@@ -130,6 +246,7 @@ const alertCorrectOrIncorrect = $("#alert-correct-or-incorrect");
 
 const letters = [`A`, `B`, `C`, `D`];
 const imgElement = $(".image");
+// -------------------------------------------------------------------
 // function init
 function init(begin) {
   blockQuestion.innerText = `Câu ${data[begin].numberOrder}/${data.length}: ${data[begin].question}
@@ -137,15 +254,15 @@ function init(begin) {
   imgElement.src = data[begin].urlImage;
   blockQuestion.appendChild(imgElement);
   blockChoice.forEach((choice, index) => {
-    choice.innerHTML = `<span class="letter">${letters[index]}</span>
-                    <span class="text-choice">${data[begin].answers[index].answer}</span>`;
+    choice.innerHTML = `<div class="letter">${letters[index]}</div>
+                    <div class="text-choice">${data[begin].answers[index].answer}</div>`;
   });
   showResultBtn.setAttribute("hidden", true);
   blockResult.setAttribute("hidden", true);
   nextBtn.setAttribute("hidden", true);
   alertCorrectOrIncorrect.setAttribute("hidden", true);
 }
-
+// ----------------------------------------------------------------------------
 // reset
 function reset() {
   blockChoice.forEach((choice) => {
@@ -163,9 +280,9 @@ function next() {
 }
 
 nextBtn.addEventListener("click", next);
-
+//----------------------------------------------------------------------------------
 // function check answer correct
-
+let score = 0; // count score from 0
 let isClick = false;
 
 blockChoice.forEach((choice, index) => {
@@ -180,7 +297,8 @@ blockChoice.forEach((choice, index) => {
       alertCorrectOrIncorrect.style.color = "#2fff00ff";
       alertCorrectOrIncorrect.removeAttribute("hidden");
       nextBtn.removeAttribute("hidden");
-      score++;
+      score++; // correct raise score by 1
+      alertCorrectOrIncorrect.scrollIntoView(true); // view focus in true or false
 
       //  other incorrect set red
     } else {
@@ -197,6 +315,7 @@ blockChoice.forEach((choice, index) => {
           otherChoice.classList.add("green-correct");
         }
       });
+      alertCorrectOrIncorrect.scrollIntoView(true); //view focus in true or false
     }
     // Nếu chưa phải câu cuối
     if (begin == data.length - 1) {
@@ -205,7 +324,7 @@ blockChoice.forEach((choice, index) => {
     }
   });
 });
-
+// ------------------------------------------------------------------------------
 //  function see result
 
 function showResult() {
@@ -251,8 +370,9 @@ const scoreBlock = $("#score");
 const paraScore = $(".para-score");
 const conclusionBlock = $(".conclusion");
 function showScore() {
-  percentScore = Math.floor((score / data.length) * 100);
+  percentScore = Math.round((score / data.length) * 100);
   scoreBlock.innerText = `${percentScore}%`;
+  scoreBlock.style.color = percentScore >= 80 ? "#3967e6ff" : "red";
   paraScore.innerText = `Bạn đã trả lời đúng ${score} trên ${data.length} câu hỏi`;
   // conclusionBlock.innerText = percentScore >= 50 ? `Bạn đã đỗ` : `Bạn đã trượt`;
 }
