@@ -38,12 +38,7 @@ h1 {
   background-color: rgb(131, 95, 28);
   text-align: center;
 }
-.choice:hover,
-button:hover {
-  background-color: rgba(70, 16, 117, 1);
-  transition: 0.8s;
-  cursor: pointer;
-}
+
 button {
   margin-top: 20px;
   width: 100px;
