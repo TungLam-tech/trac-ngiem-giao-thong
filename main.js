@@ -272,12 +272,12 @@ function reset() {
 }
 
 // function next question
-
+const stt = $(".stt");
 function next() {
   begin++;
   init(begin);
   reset();
-  imgElement.scrollIntoView(true);
+  stt.scrollIntoView(true);
   alertYouChoose.classList.add("hide");
 }
 
@@ -287,6 +287,7 @@ nextBtn.addEventListener("click", next);
 let score = 0; // count score from 0
 let isClick = false;
 const alertYouChoose = $(".alert-you-choose");
+
 blockChoice.forEach((choice, index) => {
   choice.addEventListener("click", () => {
     //  only click once time
@@ -353,7 +354,7 @@ const closeBtn = $(".btn-close");
 closeBtn.addEventListener("click", () => {
   begin = 0; // quay về câu đầu
   isClick = false; // cho phép click lại
-
+  score = 0;
   // ẩn phần kết quả
   blockResult.setAttribute("hidden", true);
 

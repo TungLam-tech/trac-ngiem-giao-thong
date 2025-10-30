@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  width: auto;
+  height: auto;
 }
 body {
   background-color: rgba(15, 15, 43);
@@ -134,4 +136,8 @@ button {
   font-style: italic;
   text-align: center;
   color: aqua;
+}
+
+.text-choice {
+  font-size: clamp(0.5rem, 1rem, 1.2rem);
 }
