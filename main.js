@@ -28,7 +28,7 @@ const data = [
   {
     numberOrder: 2,
     question: "",
-    urlImage: "./image/305.png",
+    urlImage: "./image/312.png",
     answers: [
       {
         answer: "Biển 1 và 2",
@@ -277,6 +277,7 @@ function next() {
   begin++;
   init(begin);
   reset();
+  imgElement.scrollIntoView(true);
 }
 
 nextBtn.addEventListener("click", next);
