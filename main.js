@@ -112,7 +112,7 @@ const data = [
         correct: false,
       },
       {
-        answer: "Không biển naò",
+        answer: "Không biển nào",
         correct: false,
       },
     ],
@@ -278,6 +278,7 @@ function next() {
   init(begin);
   reset();
   imgElement.scrollIntoView(true);
+  alertYouChoose.classList.add("hide");
 }
 
 nextBtn.addEventListener("click", next);
@@ -285,12 +286,14 @@ nextBtn.addEventListener("click", next);
 // function check answer correct
 let score = 0; // count score from 0
 let isClick = false;
-
+const alertYouChoose = $(".alert-you-choose");
 blockChoice.forEach((choice, index) => {
   choice.addEventListener("click", () => {
     //  only click once time
     if (isClick) return;
     isClick = true;
+    alertYouChoose.innerText = `Bạn chọn ${letters[index]}`;
+    alertYouChoose.classList.remove("hide");
     // correct set green
     if (data[begin].answers[index].correct === true) {
       choice.classList.add("green-correct");
@@ -337,6 +340,7 @@ function showResult() {
   showResultBtn.classList.add("hide");
   blockResult.removeAttribute("hidden");
   showScore();
+  alertYouChoose.classList.add("hide");
 }
 
 showResultBtn.addEventListener("click", showResult);
