@@ -11,6 +11,7 @@
     <h1>Trắc nghiệm biển báo giao thông đường bộ Việt Nam</h1>
     <main class="container">
       <div class="list-question-block"></div>
+      <div class="alert-let-100percent"></div>
       <div class="block-question">
         <span class="stt"></span>
         <span class="question"> </span>
@@ -37,6 +38,9 @@
           <div class="text-choice">Nghiêm Cấm</div>
         </div>
       </div>
+      <p id="explanation-link" class="explanation-link hide">
+        Giải thích đáp án
+      </p>
       <p class="alert-you-choose"></p>
       <p id="alert-correct-or-incorrect">Chinh xác</p>
       <div class="block-btn">
@@ -54,7 +58,17 @@
         <button class="close btn-close">Làm lại</button>
         <button class="btn-chooseListQuestion">Chọn đề</button>
       </div>
+      <div class="thong-bao-100-de-pass-bo-de">
+        Hãy đạt 100% để hoàn thành 1 bộ đề
+      </div>
     </main>
+    <!-- Modal hiển thị lời giải -->
+    <div id="explanation-modal" class="modal hide">
+      <div class="modal-content">
+        <img id="explanation-image" src="" alt="Lời giải" />
+      </div>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>

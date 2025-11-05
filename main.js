@@ -6,6 +6,11 @@ const soundWrong = new Audio("./sound/wrong.mp3");
 const soundClick = new Audio("./sound/click.mp3");
 const soundCheer = new Audio("./sound/cheer.mp3");
 const soundSad = new Audio("./sound/sad.mp3");
+// bien phan modal hien thi loi giai
+const explanationLink = $("#explanation-link");
+const explanationModal = $("#explanation-modal");
+const explanationImage = $("#explanation-image");
+
 // fetch data from quiz json
 let startIndex = 0; //không được xóa vì liên quan đến fetch
 let endIndex = 10; //không được xóa vì liên quan đến fetch
@@ -24,6 +29,7 @@ fetch("./quizData.json")
   });
 //----------------------------------------------------------------------------------
 const listQuestionBlock = $(".list-question-block");
+const let100ToPass = $(".thong-bao-100-de-pass-bo-de");
 // function hiển thị số lượng bộ đề
 function createNumberOderQuestionSet() {
   let num = Math.ceil(data.length / 10); // luôn chuẩn rồi. ko được chỉnh, cứ thêm 10 câu hỏi thì tạo 1 bộ đề
@@ -49,6 +55,7 @@ const chooseListQuestionBtn = $(".btn-chooseListQuestion"); // nút chọn đề
 chooseListQuestionBtn.addEventListener("click", () => {
   soundClick.play();
   start();
+  explanationLink.classList.add("hide");
 });
 // -------------------------------------------------------------------------
 
@@ -58,6 +65,7 @@ const blockAnswer = $(".block-answer");
 
 function start() {
   listQuestionBlock.innerHTML = ""; // reset giao diện
+  let100ToPass.classList.remove("hide");
   createNumberOderQuestionSet(); // tạo lại các bộ đề
 
   const listQuestion = $$(".list-question"); // lấy danh sách sau khi đã tạo
@@ -79,6 +87,7 @@ function start() {
     }
 
     question.addEventListener("click", () => {
+      let100ToPass.classList.add("hide");
       soundClick.play();
       raiseStartEndIndex(index);
       init(begin);
@@ -171,6 +180,7 @@ function next() {
     stt.scrollIntoView(true);
     alertYouChoose.classList.add("hide");
   }, 400);
+  explanationLink.classList.add("hide");
 }
 nextBtn.addEventListener("click", next);
 //----------------------------------------------------------------------------------
@@ -212,7 +222,7 @@ blockChoice.forEach((choice, index) => {
 
       // đặt ngay sau âm thanh để đồng bộ âm thanh và rung
       if ("vibrate" in navigator) {
-        navigator.vibrate(200);
+        navigator.vibrate(100);
       } // rung nhẹ 200ms
 
       // add green correct
@@ -228,6 +238,17 @@ blockChoice.forEach((choice, index) => {
       showResultBtn.classList.remove("hide");
       nextBtn.classList.add("hide");
     }
+    //  đoạn này là phần hiển thị modal giải thích lời giải
+    explanationLink.classList.remove("hide");
+    explanationLink.onclick = () => {
+      soundClick.play();
+      explanationImage.src = dataOfQuestionSet[begin].explanation;
+      explanationModal.classList.remove("hide");
+    };
+    //  đoạn này là click vào modal thì sẽ đóng lại modal
+    explanationModal.addEventListener("click", () => {
+      explanationModal.classList.add("hide");
+    });
   });
 });
 // ------------------------------------------------------------------------------
@@ -235,6 +256,7 @@ blockChoice.forEach((choice, index) => {
 
 function showResult() {
   blockQuestion.classList.add("hide");
+  explanationLink.classList.add("hide");
   blockChoice.forEach((choice) => {
     choice.classList.add("hide");
   });
@@ -293,6 +315,7 @@ function showScore() {
     soundSad.play();
   }
 }
+
 // --------------------------------------------------------------------------
 //  pháo hoa
 //------------------------------------------------------------------------------------

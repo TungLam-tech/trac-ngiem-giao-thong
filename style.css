@@ -169,6 +169,11 @@ button {
   background: rgba(255, 255, 255, 0.2);
   transition: 0.5s;
 }
+.thong-bao-100-de-pass-bo-de {
+  font-size: 0.8rem;
+  text-align: center;
+  color: aqua;
+}
 
 /* chuyển mượt giữa các câu hỏi */
 .block-question,
@@ -185,4 +190,44 @@ button {
 .visible {
   opacity: 1;
   transition: opacity 0.4s ease;
+}
+/* modal hien thi loi giai */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.explanation-link {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
 }
