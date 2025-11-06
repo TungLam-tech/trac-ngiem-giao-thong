@@ -9,7 +9,7 @@ body {
   color: white;
 }
 main {
-  width: 60vw;
+  width: 80vw;
   height: auto;
   background-color: rgb(37, 72, 78);
   margin: 0px auto;
@@ -57,7 +57,7 @@ button {
 }
 .block-result {
   background-color: rgba(201, 201, 221, 1);
-  width: 40vw;
+  width: 60vw;
   height: 250px;
   border-radius: 20px;
   text-align: center;
