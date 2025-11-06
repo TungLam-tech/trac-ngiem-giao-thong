@@ -4,6 +4,27 @@
   width: auto;
   height: auto;
 }
+
+@media screen and (min-width: 768px) {
+  img {
+    display: block;
+    margin: 5px auto;
+    width: 60%;
+    height: auto;
+    margin-bottom: 50px;
+    object-fit: contain;
+  }
+}
+@media screen and (min-width: 150px) and (max-width: 767.5px) {
+  img {
+    display: block;
+    margin: 5px auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    object-fit: contain;
+  }
+}
 body {
   background-color: rgba(15, 15, 43);
   color: white;
@@ -114,15 +135,6 @@ button {
 }
 #total {
   color: rgb(228, 10, 10);
-}
-
-.image {
-  display: block;
-  margin: 5px auto;
-  width: 100%;
-  height: px;
-  margin-bottom: 50px;
-  object-fit: contain;
 }
 
 /* @media screen and (max-width: 678px) {
