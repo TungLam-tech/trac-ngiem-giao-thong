@@ -11,25 +11,83 @@ const explanationLink = $("#explanation-link");
 const explanationModal = $("#explanation-modal");
 const explanationImage = $("#explanation-image");
 
-// fetch data from quiz json
+// fetch data from bienbaoData.json  BIENBAO DATA
 let startIndex = 0; //không được xóa vì liên quan đến fetch
 let endIndex = 10; //không được xóa vì liên quan đến fetch
 let data = [];
 let dataOfQuestionSet = [];
 
-fetch("./quizData.json")
+fetch("./bienbaoData.json")
   .then((res) => res.json())
   .then((result) => {
     data = result;
     dataOfQuestionSet = data.slice(startIndex, endIndex);
-    start();
+    // start();
+    main();
+  })
+  .catch((err) => {
+    console.error("Lỗi khi load quizData.json:", err);
+  });
+
+// fetch data from quidinhchungData
+fetch("./quidinhchungData.json")
+  .then((res) => res.json())
+  .then((result) => {
+    data = result;
+    dataOfQuestionSet = data.slice(startIndex, endIndex);
+    // start();
+    main();
   })
   .catch((err) => {
     console.error("Lỗi khi load quizData.json:", err);
   });
 //----------------------------------------------------------------------------------
+// các biến ân hiện giao diện
 const listQuestionBlock = $(".list-question-block");
 const let100ToPass = $(".thong-bao-100-de-pass-bo-de");
+
+const mainBlock = $(".mainBlock");
+const bienBao = $(".bienBao");
+const qdc = $(".qdc");
+const diemLiet = $(".diemLiet");
+
+// function main  // giao dien ban dau nhat
+function main() {
+  blockAnswer.classList.add("hide");
+  blockQuestion.classList.add("hide");
+  nextBtn.classList.add("hide");
+  alertCorrectOrIncorrect.classList.add("hide");
+  blockResult.classList.add("hide");
+  showResultBtn.classList.add("hide");
+  let100ToPass.classList.add("hide");
+
+  // bien bao
+  bienBao.addEventListener("click", () => {
+    bienBao.classList.add("hide");
+    qdc.classList.add("hide");
+    diemLiet.classList.add("hide");
+    start();
+  });
+  // sa hinh
+  qdc.addEventListener("click", () => {
+    bienBao.classList.add("hide");
+    qdc.classList.add("hide");
+    diemLiet.classList.add("hide");
+  });
+
+  // diem liet
+  diemLiet.addEventListener("click", () => {
+    bienBao.classList.add("hide");
+    saHinh.classList.add("hide");
+    diemLiet.classList.add("hide");
+  });
+}
+//  function quay lại main
+// const back = $(".backMain");
+// function backMain() {
+//   listQuestionBlock.innerHTML = "";
+// }
+// back.onclick = backMain;
 // function hiển thị số lượng bộ đề
 function createNumberOderQuestionSet() {
   let num = Math.ceil(data.length / 10); // luôn chuẩn rồi. ko được chỉnh, cứ thêm 10 câu hỏi thì tạo 1 bộ đề
@@ -48,7 +106,6 @@ function raiseStartEndIndex(num) {
   dataOfQuestionSet = data.slice(startIndex, endIndex);
 }
 
-//------------------------------------------------------------------
 //  tra loi xong quay lai man hinh chinh
 const chooseListQuestionBtn = $(".btn-chooseListQuestion"); // nút chọn đề
 
@@ -70,22 +127,9 @@ function start() {
 
   const listQuestion = $$(".list-question"); // lấy danh sách sau khi đã tạo
 
-  const allResults = JSON.parse(localStorage.getItem("pass")) || {};
+  const result2 = JSON.parse(localStorage.getItem("pass")) || {};
 
   listQuestion.forEach((question, index) => {
-    if (allResults.hasOwnProperty(index)) {
-      if (allResults[index] === 100) {
-        question.style.color = "aqua";
-        question.innerHTML = `✓ Đề số ${index + 1}`;
-      } else {
-        question.style.color = "#ff6b3eff";
-        question.innerHTML = `✗ Đề số ${index + 1}`;
-      }
-    } else {
-      question.style.color = "";
-      question.innerHTML = `Đề số ${index + 1}`;
-    }
-
     question.addEventListener("click", () => {
       let100ToPass.classList.add("hide");
       soundClick.play();
@@ -97,9 +141,22 @@ function start() {
       nextBtn.classList.add("hide");
       alertCorrectOrIncorrect.classList.add("hide");
       blockChoice.forEach((choice) => {
-        choice.classList.remove("hide");
+        //đoạn này vẫn cần vì phải chọn lại đề nhiều lần,
+        choice.classList.remove("hide"); //không chỉ một lần duy nhất
       });
     });
+    if (result2.hasOwnProperty(index)) {
+      if (result2[index] === 100) {
+        question.style.color = "aqua";
+        question.innerHTML = `✓ Đề số ${index + 1}`;
+      } else {
+        question.style.color = "#ff6b3eff";
+        question.innerHTML = `✗ Đề số ${index + 1}`;
+      }
+    } else {
+      question.style.color = "";
+      question.innerHTML = `Đề số ${index + 1}`;
+    }
   });
 
   begin = 0;
@@ -165,7 +222,7 @@ function next() {
   blockAnswer.classList.remove("visible");
   blockQuestion.classList.add("fade");
   blockAnswer.classList.add("fade");
-
+  stt.scrollIntoView(true);
   setTimeout(() => {
     begin++;
     init(begin);
@@ -177,7 +234,6 @@ function next() {
     blockQuestion.classList.add("visible");
     blockAnswer.classList.add("visible");
 
-    stt.scrollIntoView(true);
     alertYouChoose.classList.add("hide");
   }, 400);
   explanationLink.classList.add("hide");
@@ -306,7 +362,7 @@ function showScore() {
   paraScore.innerText = `Bạn đã trả lời đúng ${score} trên ${dataOfQuestionSet.length} câu hỏi`;
 
   const selectedIndex = JSON.parse(localStorage.getItem("selected index"));
-  let allResults = JSON.parse(localStorage.getItem("pass")) || {};
+  let allResults = JSON.parse(localStorage.getItem("pass")) || {}; // để lần 2 thì lại lấy lại
   allResults[selectedIndex] = percentScore;
   localStorage.setItem("pass", JSON.stringify(allResults));
   if (percentScore === 100) {

@@ -106,11 +106,11 @@
       },
       {
         "answer": "Biển 2",
-        "correct": false
+        "correct": true
       },
       {
-        "answer": "Cả 2 biển",
-        "correct": true
+        "answer": "",
+        "correct": false
       },
       {
         "answer": "",
@@ -478,5 +478,245 @@
       }
     ],
     "explanation": "./image/324gt.png"
+  },
+  {
+    "numberOrder": 21,
+    "question": "",
+    "urlImage": "./image/325.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": false
+      },
+      {
+        "answer": "Biển 2",
+        "correct": true
+      },
+      {
+        "answer": "Không biển nào",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/325gt.png"
+  },
+  {
+    "numberOrder": 22,
+    "question": "",
+    "urlImage": "./image/326.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": false
+      },
+      {
+        "answer": "Biển 2",
+        "correct": true
+      },
+      {
+        "answer": "Không biển nào",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/326gt.png"
+  },
+  {
+    "numberOrder": 23,
+    "question": "",
+    "urlImage": "./image/327.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": false
+      },
+      {
+        "answer": "Biển 2",
+        "correct": false
+      },
+      {
+        "answer": "Cả 2 biển",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/327gt.png"
+  },
+  {
+    "numberOrder": 24,
+    "question": "",
+    "urlImage": "./image/328.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": true
+      },
+      {
+        "answer": "Biển 2",
+        "correct": false
+      },
+      {
+        "answer": "Cả 2 biển",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/328gt.png"
+  },
+  {
+    "numberOrder": 25,
+    "question": "",
+    "urlImage": "./image/329.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": false
+      },
+      {
+        "answer": "Biển 2",
+        "correct": true
+      },
+      {
+        "answer": "Cả 3 biển",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/329gt.png"
+  },
+  {
+    "numberOrder": 26,
+    "question": "",
+    "urlImage": "./image/330.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": false
+      },
+      {
+        "answer": "Biển 2",
+        "correct": false
+      },
+      {
+        "answer": "Biển 1 và 2",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/330gt.png"
+  },
+  {
+    "numberOrder": 27,
+    "question": "",
+    "urlImage": "./image/331.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": false
+      },
+      {
+        "answer": "Biển 1 và 3",
+        "correct": true
+      },
+      {
+        "answer": "Biển 2 và 3",
+        "correct": false
+      },
+      {
+        "answer": "Biển 3",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/331gt.png"
+  },
+  {
+    "numberOrder": 28,
+    "question": "",
+    "urlImage": "./image/332.png",
+    "answers": [
+      {
+        "answer": "Biển 1 và 2",
+        "correct": true
+      },
+      {
+        "answer": "Biển 2",
+        "correct": false
+      },
+      {
+        "answer": "Biển 2 và 3",
+        "correct": false
+      },
+      {
+        "answer": "Biển 3",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/332gt.png"
+  },
+  {
+    "numberOrder": 29,
+    "question": "",
+    "urlImage": "./image/333.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": false
+      },
+      {
+        "answer": "Biển 2",
+        "correct": true
+      },
+      {
+        "answer": "Cả 3 biển",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/333gt.png"
+  },
+  {
+    "numberOrder": 30,
+    "question": "",
+    "urlImage": "./image/334.png",
+    "answers": [
+      {
+        "answer": "Biển 1",
+        "correct": true
+      },
+      {
+        "answer": "Biển 2",
+        "correct": false
+      },
+      {
+        "answer": "Cả 2 biển",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": "./image/334gt.png"
   }
 ]
