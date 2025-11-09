@@ -257,10 +257,10 @@ button {
 .mainBlock span {
   flex: 0 0 100px; /* mỗi đề có chiều rộng cố định 100px*/
   height: auto;
-  background: rgba(255, 255, 255, 0.1);
+
   border-radius: 5px;
   padding: 4px 0;
-  color: white;
+
   cursor: pointer;
   border: solid 1px;
   text-align: center;

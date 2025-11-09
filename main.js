@@ -14,32 +14,28 @@ const explanationImage = $("#explanation-image");
 // fetch data from bienbaoData.json  BIENBAO DATA
 let startIndex = 0; //không được xóa vì liên quan đến fetch
 let endIndex = 10; //không được xóa vì liên quan đến fetch
-let data = [];
+let currentFullData = []; // sẽ là data1 hoặc data2 tùy loại đề
+let currentQuestionSet = []; // mảng 10 câu hiện tại
+
+let data1 = [];
 let dataOfQuestionSet = [];
+let data2 = [];
+let dataQdc = [];
+Promise.all([
+  fetch("./bienbaoData.json").then((res) => res.json()),
+  fetch("./quidinhchungData.json").then((res) => res.json()),
+])
+  .then(([result1, result2]) => {
+    data1 = result1;
+    dataOfQuestionSet = data1.slice(startIndex, endIndex);
 
-fetch("./bienbaoData.json")
-  .then((res) => res.json())
-  .then((result) => {
-    data = result;
-    dataOfQuestionSet = data.slice(startIndex, endIndex);
-    // start();
-    main();
+    data2 = result2;
+    dataQdc = data2.slice(startIndex, endIndex);
+    console.log(data1);
+    main(); // gọi một lần duy nhất sau khi cả hai đã sẵn sàng
   })
   .catch((err) => {
-    console.error("Lỗi khi load quizData.json:", err);
-  });
-
-// fetch data from quidinhchungData
-fetch("./quidinhchungData.json")
-  .then((res) => res.json())
-  .then((result) => {
-    data = result;
-    dataOfQuestionSet = data.slice(startIndex, endIndex);
-    // start();
-    main();
-  })
-  .catch((err) => {
-    console.error("Lỗi khi load quizData.json:", err);
+    console.error("Lỗi khi load dữ liệu:", err);
   });
 //----------------------------------------------------------------------------------
 // các biến ân hiện giao diện
@@ -66,19 +62,20 @@ function main() {
     bienBao.classList.add("hide");
     qdc.classList.add("hide");
     diemLiet.classList.add("hide");
-    start();
+    start(data1); // dùng data1 cho biển báo
   });
-  // sa hinh
+
   qdc.addEventListener("click", () => {
     bienBao.classList.add("hide");
     qdc.classList.add("hide");
     diemLiet.classList.add("hide");
+    start(data2); // dùng data2 cho quy định chung
   });
 
   // diem liet
   diemLiet.addEventListener("click", () => {
     bienBao.classList.add("hide");
-    saHinh.classList.add("hide");
+    qdc.classList.add("hide");
     diemLiet.classList.add("hide");
   });
 }
@@ -89,10 +86,11 @@ function main() {
 // }
 // back.onclick = backMain;
 // function hiển thị số lượng bộ đề
-function createNumberOderQuestionSet() {
+
+function createNumberOderQuestionSet(data) {
   let num = Math.ceil(data.length / 10); // luôn chuẩn rồi. ko được chỉnh, cứ thêm 10 câu hỏi thì tạo 1 bộ đề
   for (let i = 0; i < num; i++) {
-    listQuestionBlock.innerHTML += `<span class="list-question" data-number="${i}">Đề số ${
+    listQuestionBlock.innerHTML += `<span class="list-question">Đề số ${
       i + 1
     }</span>`;
   }
@@ -100,11 +98,11 @@ function createNumberOderQuestionSet() {
 
 // --------------------------------------------------------------------
 // function tăng startIndex và endIndex lên mỗi lần 10
-function raiseStartEndIndex(num) {
-  startIndex = num * 10;
-  endIndex = startIndex + 10;
-  dataOfQuestionSet = data.slice(startIndex, endIndex);
-}
+// function raiseStartEndIndex(num, data, arr) {
+//   startIndex = num * 10;
+//   endIndex = startIndex + 10;
+//   return arr.slice(startIndex, endIndex);
+// }
 
 //  tra loi xong quay lai man hinh chinh
 const chooseListQuestionBtn = $(".btn-chooseListQuestion"); // nút chọn đề
@@ -120,31 +118,35 @@ chooseListQuestionBtn.addEventListener("click", () => {
 // function man hinh chinh (start())
 const blockAnswer = $(".block-answer");
 
-function start() {
-  listQuestionBlock.innerHTML = ""; // reset giao diện
+function start(fullData) {
+  currentFullData = fullData;
+  currentQuestionSet = fullData.slice(startIndex, endIndex);
+  listQuestionBlock.innerHTML = "";
   let100ToPass.classList.remove("hide");
-  createNumberOderQuestionSet(); // tạo lại các bộ đề
+  createNumberOderQuestionSet(fullData);
 
-  const listQuestion = $$(".list-question"); // lấy danh sách sau khi đã tạo
-
+  const listQuestion = $$(".list-question");
   const result2 = JSON.parse(localStorage.getItem("pass")) || {};
 
   listQuestion.forEach((question, index) => {
     question.addEventListener("click", () => {
       let100ToPass.classList.add("hide");
       soundClick.play();
-      raiseStartEndIndex(index);
-      init(begin);
+      startIndex = index * 10;
+      endIndex = startIndex + 10;
+      currentQuestionSet = currentFullData.slice(startIndex, endIndex);
+      init(begin); // dùng currentQuestionSet trong init()
       localStorage.setItem("selected index", JSON.stringify(index));
       blockAnswer.classList.remove("hide");
       blockQuestion.classList.remove("hide");
       nextBtn.classList.add("hide");
       alertCorrectOrIncorrect.classList.add("hide");
       blockChoice.forEach((choice) => {
-        //đoạn này vẫn cần vì phải chọn lại đề nhiều lần,
-        choice.classList.remove("hide"); //không chỉ một lần duy nhất
+        choice.classList.remove("hide");
       });
     });
+
+    // xử lý màu sắc đề đã làm
     if (result2.hasOwnProperty(index)) {
       if (result2[index] === 100) {
         question.style.color = "aqua";
@@ -189,15 +191,19 @@ const imgElement = $(".image");
 // -------------------------------------------------------------------
 // function init
 function init(begin) {
-  listQuestionBlock.innerHTML = ""; // để bộ câu hỏi ẩn đi
-  blockQuestion.innerText = `Câu số ${dataOfQuestionSet[begin].numberOrder}: ${dataOfQuestionSet[begin].question}
-`;
-  imgElement.src = dataOfQuestionSet[begin].urlImage;
+  listQuestionBlock.innerHTML = ""; // ẩn danh sách đề
+
+  const currentQuestion = currentQuestionSet[begin];
+
+  blockQuestion.innerText = `Câu số ${currentQuestion.numberOrder}: ${currentQuestion.question}`;
+  imgElement.src = currentQuestion.urlImage;
   blockQuestion.appendChild(imgElement);
+
   blockChoice.forEach((choice, index) => {
     choice.innerHTML = `<div class="letter">${letters[index]}</div>
-                    <div class="text-choice">${dataOfQuestionSet[begin].answers[index].answer}</div>`;
+                        <div class="text-choice">${currentQuestion.answers[index].answer}</div>`;
   });
+
   showResultBtn.classList.add("hide");
   blockResult.classList.add("hide");
   nextBtn.classList.add("hide");
