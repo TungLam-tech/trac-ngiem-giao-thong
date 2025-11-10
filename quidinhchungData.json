@@ -1,482 +1,482 @@
 [
-    {
-        "numberOrder": 1,
-        "question": "Câu 1. Phần của đường bộ được sử dụng cho phương tiện giao thông đường \nbộ đi lại là gì?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Phần mặt đường và lề đường.",
-                "correct": false
-            },
-            {
-                "answer": "Phần đường xe chạy.",
-                "correct": true
-            },
-            {
-                "answer": "Phần đường xe cơ giới.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 2,
-        "question": "Làn đường là gì?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, sử  dụng cho xe chạy.",
-                "correct": false
-            },
-            {
-                "answer": ". Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, có  đủ chiều rộng cho xe chạy an toàn.",
-                "correct": true
-            },
-            {
-                "answer": "Là đường cho xe ô tô chạy, dừng, đỗ an toàn.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 3,
-        "question": "Khổ giới hạn của đường bộ được hiểu như thế nào là đúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Khổ giới hạn của đường bộ là khoảng trống có kích thước giới hạn về chiều  rộng, chiều cao của đường bộ để các xe, bao gồm cả hàng hoá xếp trên xe đi qua  được an toàn và được xác định theo quy chuẩn, tiêu chuẩn kỹ thuật của đường bộ.",
-                "correct": true
-            },
-            {
-                "answer": ". Là khoảng trống có kích thước giới hạn về chiều rộng của đường, cầu, bến phà,  hầm trên đường bộ để các xe kể cả hàng hóa xếp trên xe đi qua được an toàn.x",
-                "correct": false
-            },
-            {
-                "answer": "Là khoảng trống có kích thước giới hạn về chiều cao của cầu, bến phà, hầm  trên đường bộ để các xe đi qua được an toàn.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 4,
-        "question": "Dải phân cách được lắp đặt để làm gì?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Để phân chia các làn đường dành cho xe cơ giới và xe thô sơ trên đường cao tốc.",
-                "correct": false
-            },
-            {
-                "answer": "Để phân chia phần đường xe chạy thành hai chiều riêng biệt hoặc để phân chia  phần đường dành cho xe cơ giới và xe thô sơ hoặc của nhiều loại xe khác nhau  trên cùng một chiều đường.",
-                "correct": true
-            },
-            {
-                "answer": "Để phân tách phần đường xe chạy và hành lang an toàn giao thông.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 5,
-        "question": "Vạch kẻ đường là gì?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là báo hiệu đường bộ để hỗ trợ cảnh báo nguy hiểm cho người tham gia giao  thông đường bộ.",
-                "correct": false
-            },
-            {
-                "answer": "Là vạch chỉ sự phân chia làn đường, vị trí hoặc hướng đi, vị trí dừng lại.",
-                "correct": true
-            },
-            {
-                "answer": "Là báo hiệu cho người tham gia giao thông đường bộ về các thông tin của đường bộ.",
-                "correct": false
-            },
-            {
-                "answer": "Cả ba ý trên.",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 6,
-        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ được \nhiểu như thế nào là đúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là người điều khiển xe cơ giới, người điều khiển xe thô sơ, người điều khiển  xe máy chuyên dùng.",
-                "correct": true
-            },
-            {
-                "answer": "Là người được giao nhiệm vụ hướng dẫn giao thông trên đường bộ.",
-                "correct": false
-            },
-            {
-                "answer": "Cả hai ý trên.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 7,
-        "question": "Người lái xe được hiểu như thế nào là đúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là người điều khiển xe cơ giới.",
-                "correct": true
-            },
-            {
-                "answer": "Là người điều khiển xe thô sơ.",
-                "correct": false
-            },
-            {
-                "answer": "Là người điều khiển xe máy chuyên dùng",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 8,
-        "question": "Trong nhóm các phương tiện giao thông đường bộ dưới đây, nhóm \nphương tiện nào là xe cơ giới?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Xe ô tô; máy kéo; xe mô tô hai bánh; xe mô tô ba bánh; xe gắn máy; xe cơ giới  dùng cho người khuyết tật và xe máy chuyên dùng; xe đạp, xe đạp máy, xe đạp  điện.",
-                "correct": false
-            },
-            {
-                "answer": "Xe ô tô; rơ moóc được kéo bởi xe ô tô; sơ mi rơ moóc được kéo bởi ô tô đầu  kéo; xe chở người bốn bánh có gắn động cơ; xe chở hàng bốn bánh có gắn động  cơ; xe mô tô, xe gắn máy và các loại xe tương tự.",
-                "correct": true
-            },
-            {
-                "answer": "",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 9,
-        "question": "Trong nhóm các phương tiện giao thông đường bộ dưới đây, nhóm \nphương tiện nào là xe thô sơ?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Xe đạp, xe đạp máy, xe đạp điện; xe xích lô; xe lăn dùng cho người khuyết tật;  xe vật nuôi kéo và các loại xe tương tự.",
-                "correct": true
-            },
-            {
-                "answer": "Xe đạp (kể cả xe đạp máy, xe đạp điện), xe gắn máy, xe cơ giới dùng cho người  khuyết tật và xe máy chuyên dùng.",
-                "correct": false
-            },
-            {
-                "answer": "Xe ô tô, máy kéo, rơ moóc hoặc sơ mi rơ moóc được kéo bởi xe ô tô, máy kéo.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 10,
-        "question": "Phương tiện giao thông đường bộ gồm những loại nào?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Phương tiện giao thông cơ giới đường bộ.",
-                "correct": false
-            },
-            {
-                "answer": "Phương tiện giao thông thô sơ đường bộ, xe máy chuyên dùng và các loại xe  tương tự.",
-                "correct": false
-            },
-            {
-                "answer": "Cả hai ý trên.",
-                "correct": true
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 11,
-        "question": "Người tham gia giao thông đường bộ gồm những đối tượng nào?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Người điều khiển, người được chở trên phương tiện tham gia giao thông đường  bộ",
-                "correct": false
-            },
-            {
-                "answer": "Người điều khiển, dẫn dắt vật nuôi trên đường bộ; người đi bộ trên đường bộ.",
-                "correct": false
-            },
-            {
-                "answer": "Cả hai ý trên.",
-                "correct": true
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 12,
-        "question": "Người điều khiển phương tiện tham gia giao thông đường bộ gồm \nnhững đối tượng nào dưới đây?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Người điều khiển xe cơ giới, người điều khiển xe thô sơ.",
-                "correct": false
-            },
-            {
-                "answer": "Người điều khiển xe máy chuyên dùng.",
-                "correct": false
-            },
-            {
-                "answer": "Cả hai ý trên.",
-                "correct": true
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 13,
-        "question": "Người điều khiển giao thông đường bộ được hiểu như thế nào là \nđúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là người điều khiển phương tiện tham gia giao thông đường bộ.",
-                "correct": false
-            },
-            {
-                "answer": "Là Cảnh sát giao thông và người được giao nhiệm vụ hướng dẫn giao thông  trên đường bộ.",
-                "correct": true
-            },
-            {
-                "answer": "Là người tham gia giao thông đường bộ.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 14,
-        "question": "Dừng xe được hiểu như thế nào là đúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là trạng thái đứng yên của xe không giới hạn thời gian để cho người lên, xuống  xe, xếp dỡ hàng hóa hoặc thực hiện công việc khác.",
-                "correct": false
-            },
-            {
-                "answer": "Là trạng thái đứng yên tạm thời của xe trong một khoảng thời gian cần thiết đủ  để cho người lên xe, xuống xe, xếp dỡ hàng hóa, kiểm tra kỹ thuật xe hoặc hoạt  động khác. Khi dừng xe không được tắt máy và không được rời khỏi vị trí lái, trừ  trường hợp rời khỏi vị trí lái để đóng, mở cửa xe, xếp dỡ hàng hóa, kiểm tra kỹ  thuật xe nhưng phải sử dụng phanh đỗ xe hoặc thực hiện biện pháp an toàn khác.",
-                "correct": true
-            },
-            {
-                "answer": "Là trạng thái đứng yên của xe không giới hạn thời gian giữa 02 lần vận chuyển  hàng hóa hoặc hành khách.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 15,
-        "question": "Đỗ xe được hiểu như thế nào là đúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là trạng thái đứng yên của xe có giới hạn thời gian trong một khoảng thời gian  cần thiết đủ để cho người lên, xuống xe đó, xếp dỡ hàng hóa hoặc thực hiện công  việc khác.",
-                "correct": false
-            },
-            {
-                "answer": "Là trạng thái đứng yên của xe không giới hạn thời gian. Khi đỗ xe, người điều  khiển phương tiện tham gia giao thông đường bộ chỉ được rời khỏi xe khi đã sử  dụng phanh đỗ xe hoặc thực hiện biện pháp an toàn khác. Xe đỗ trên đoạn đường  dốc phải đánh lái về phía lề đường, chèn bánh.",
-                "correct": true
-            },
-            {
-                "answer": "",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 16,
-        "question": "Đường cao tốc được hiểu như thế nào là đúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là một cấp kỹ thuật của đường bộ, chỉ dành cho một số loại xe cơ giới, xe máy  chuyên dùng tham gia giao thông theo quy định của pháp luật. Có dải phân cách  phân chia hai chiều xe chạy riêng biệt, không giao nhau cùng mức với một hoặc  các đường khác, chỉ cho xe ra, vào ở những điểm nhất định. Có hàng rào bảo vệ,  trang thiết bị phục vụ, bảo đảm giao thông liên tục, an toàn, rút ngắn thời gian  hành trình.",
-                "correct": true
-            },
-            {
-                "answer": "Là đường nối liền Thủ đô Hà Nội với trung tâm hành chính cấp tỉnh; đường nối  liền các trung tâm hành chính cấp tỉnh; đường có vị trí quan trọng đối với sự phát  triển kinh tế- xã hội, bảo đảm quốc phòng, an ninh của vùng, khu vực.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 17,
-        "question": "Thiết bị an toàn cho trẻ em được hiểu như thế nào là đúng?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm  trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong  trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế  sự di chuyển của cơ thể trẻ em.",
-                "correct": true
-            },
-            {
-                "answer": "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế đứng hoặc nằm  trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong  trường hợp xe ô tô lưu thông bình thường.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 18,
-        "question": "Theo chức năng phục vụ thì đường bộ được phân loại như thế nào?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Đường chính, đường nhánh, đường gom, đường bên, đường dành cho giao  thông công cộng, đường nội bộ, đường dành riêng cho người đi bộ, người đi xe  đạp và các đường khác.",
-                "correct": true
-            },
-            {
-                "answer": ". Đường chính, đường nhánh, đường gom, đường dành cho giao thông công  cộng, đường nội bộ, đường dành riêng cho người đi bộ, người đi xe đạp và các  đường khác.",
-                "correct": false
-            },
-            {
-                "answer": "Đường chính, đường nhánh, đường gom, đường bên, đường dành cho giao thông  công cộng, đường dành riêng cho người đi bộ, người đi xe đạp và các đường khác.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 19,
-        "question": "Hành vi nào dưới đây bị nghiêm cấm?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Sử dụng xe đạp đi trên các tuyến quốc lộ.",
-                "correct": false
-            },
-            {
-                "answer": "Rải vật sắc nhọn, đổ chất gây trơn trượt trên đường bộ.",
-                "correct": true
-            },
-            {
-                "answer": "Cả hai ý trên.",
-                "correct": false
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    },
-    {
-        "numberOrder": 20,
-        "question": "Hành vi đưa xe cơ giới, xe máy chuyên dùng tham gia giao thông \nđường bộ nào dưới đây bị cấm?",
-        "urlImage": "",
-        "answers": [
-            {
-                "answer": "Không có chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường.",
-                "correct": false
-            },
-            {
-                "answer": "Hết niên hạn sử dụng.",
-                "correct": false
-            },
-            {
-                "answer": "Cả hai ý trên.",
-                "correct": true
-            },
-            {
-                "answer": "",
-                "correct": false
-            }
-        ],
-        "explanation": ""
-    }
+  {
+    "numberOrder": 1,
+    "question": "Phần của đường bộ được sử dụng cho phương tiện giao thông đường \nbộ đi lại là gì?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Phần mặt đường và lề đường.",
+        "correct": false
+      },
+      {
+        "answer": "Phần đường xe chạy.",
+        "correct": true
+      },
+      {
+        "answer": "Phần đường xe cơ giới.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 2,
+    "question": "Làn đường là gì?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, sử  dụng cho xe chạy.",
+        "correct": false
+      },
+      {
+        "answer": ". Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, có  đủ chiều rộng cho xe chạy an toàn.",
+        "correct": true
+      },
+      {
+        "answer": "Là đường cho xe ô tô chạy, dừng, đỗ an toàn.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 3,
+    "question": "Khổ giới hạn của đường bộ được hiểu như thế nào là đúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Khổ giới hạn của đường bộ là khoảng trống có kích thước giới hạn về chiều  rộng, chiều cao của đường bộ để các xe, bao gồm cả hàng hoá xếp trên xe đi qua  được an toàn và được xác định theo quy chuẩn, tiêu chuẩn kỹ thuật của đường bộ.",
+        "correct": true
+      },
+      {
+        "answer": ". Là khoảng trống có kích thước giới hạn về chiều rộng của đường, cầu, bến phà,  hầm trên đường bộ để các xe kể cả hàng hóa xếp trên xe đi qua được an toàn.x",
+        "correct": false
+      },
+      {
+        "answer": "Là khoảng trống có kích thước giới hạn về chiều cao của cầu, bến phà, hầm  trên đường bộ để các xe đi qua được an toàn.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 4,
+    "question": "Dải phân cách được lắp đặt để làm gì?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Để phân chia các làn đường dành cho xe cơ giới và xe thô sơ trên đường cao tốc.",
+        "correct": false
+      },
+      {
+        "answer": "Để phân chia phần đường xe chạy thành hai chiều riêng biệt hoặc để phân chia  phần đường dành cho xe cơ giới và xe thô sơ hoặc của nhiều loại xe khác nhau  trên cùng một chiều đường.",
+        "correct": true
+      },
+      {
+        "answer": "Để phân tách phần đường xe chạy và hành lang an toàn giao thông.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 5,
+    "question": "Vạch kẻ đường là gì?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là báo hiệu đường bộ để hỗ trợ cảnh báo nguy hiểm cho người tham gia giao  thông đường bộ.",
+        "correct": false
+      },
+      {
+        "answer": "Là vạch chỉ sự phân chia làn đường, vị trí hoặc hướng đi, vị trí dừng lại.",
+        "correct": true
+      },
+      {
+        "answer": "Là báo hiệu cho người tham gia giao thông đường bộ về các thông tin của đường bộ.",
+        "correct": false
+      },
+      {
+        "answer": "Cả ba ý trên.",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 6,
+    "question": "Người điều khiển phương tiện tham gia giao thông đường bộ được \nhiểu như thế nào là đúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là người điều khiển xe cơ giới, người điều khiển xe thô sơ, người điều khiển  xe máy chuyên dùng.",
+        "correct": true
+      },
+      {
+        "answer": "Là người được giao nhiệm vụ hướng dẫn giao thông trên đường bộ.",
+        "correct": false
+      },
+      {
+        "answer": "Cả hai ý trên.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 7,
+    "question": "Người lái xe được hiểu như thế nào là đúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là người điều khiển xe cơ giới.",
+        "correct": true
+      },
+      {
+        "answer": "Là người điều khiển xe thô sơ.",
+        "correct": false
+      },
+      {
+        "answer": "Là người điều khiển xe máy chuyên dùng",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 8,
+    "question": "Trong nhóm các phương tiện giao thông đường bộ dưới đây, nhóm \nphương tiện nào là xe cơ giới?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Xe ô tô; máy kéo; xe mô tô hai bánh; xe mô tô ba bánh; xe gắn máy; xe cơ giới  dùng cho người khuyết tật và xe máy chuyên dùng; xe đạp, xe đạp máy, xe đạp  điện.",
+        "correct": false
+      },
+      {
+        "answer": "Xe ô tô; rơ moóc được kéo bởi xe ô tô; sơ mi rơ moóc được kéo bởi ô tô đầu  kéo; xe chở người bốn bánh có gắn động cơ; xe chở hàng bốn bánh có gắn động  cơ; xe mô tô, xe gắn máy và các loại xe tương tự.",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 9,
+    "question": "Trong nhóm các phương tiện giao thông đường bộ dưới đây, nhóm \nphương tiện nào là xe thô sơ?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Xe đạp, xe đạp máy, xe đạp điện; xe xích lô; xe lăn dùng cho người khuyết tật;  xe vật nuôi kéo và các loại xe tương tự.",
+        "correct": true
+      },
+      {
+        "answer": "Xe đạp (kể cả xe đạp máy, xe đạp điện), xe gắn máy, xe cơ giới dùng cho người  khuyết tật và xe máy chuyên dùng.",
+        "correct": false
+      },
+      {
+        "answer": "Xe ô tô, máy kéo, rơ moóc hoặc sơ mi rơ moóc được kéo bởi xe ô tô, máy kéo.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 10,
+    "question": "Phương tiện giao thông đường bộ gồm những loại nào?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Phương tiện giao thông cơ giới đường bộ.",
+        "correct": false
+      },
+      {
+        "answer": "Phương tiện giao thông thô sơ đường bộ, xe máy chuyên dùng và các loại xe  tương tự.",
+        "correct": false
+      },
+      {
+        "answer": "Cả hai ý trên.",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 11,
+    "question": "Người tham gia giao thông đường bộ gồm những đối tượng nào?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Người điều khiển, người được chở trên phương tiện tham gia giao thông đường  bộ",
+        "correct": false
+      },
+      {
+        "answer": "Người điều khiển, dẫn dắt vật nuôi trên đường bộ; người đi bộ trên đường bộ.",
+        "correct": false
+      },
+      {
+        "answer": "Cả hai ý trên.",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 12,
+    "question": "Người điều khiển phương tiện tham gia giao thông đường bộ gồm \nnhững đối tượng nào dưới đây?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Người điều khiển xe cơ giới, người điều khiển xe thô sơ.",
+        "correct": false
+      },
+      {
+        "answer": "Người điều khiển xe máy chuyên dùng.",
+        "correct": false
+      },
+      {
+        "answer": "Cả hai ý trên.",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 13,
+    "question": "Người điều khiển giao thông đường bộ được hiểu như thế nào là \nđúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là người điều khiển phương tiện tham gia giao thông đường bộ.",
+        "correct": false
+      },
+      {
+        "answer": "Là Cảnh sát giao thông và người được giao nhiệm vụ hướng dẫn giao thông  trên đường bộ.",
+        "correct": true
+      },
+      {
+        "answer": "Là người tham gia giao thông đường bộ.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 14,
+    "question": "Dừng xe được hiểu như thế nào là đúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là trạng thái đứng yên của xe không giới hạn thời gian để cho người lên, xuống  xe, xếp dỡ hàng hóa hoặc thực hiện công việc khác.",
+        "correct": false
+      },
+      {
+        "answer": "Là trạng thái đứng yên tạm thời của xe trong một khoảng thời gian cần thiết đủ  để cho người lên xe, xuống xe, xếp dỡ hàng hóa, kiểm tra kỹ thuật xe hoặc hoạt  động khác. Khi dừng xe không được tắt máy và không được rời khỏi vị trí lái, trừ  trường hợp rời khỏi vị trí lái để đóng, mở cửa xe, xếp dỡ hàng hóa, kiểm tra kỹ  thuật xe nhưng phải sử dụng phanh đỗ xe hoặc thực hiện biện pháp an toàn khác.",
+        "correct": true
+      },
+      {
+        "answer": "Là trạng thái đứng yên của xe không giới hạn thời gian giữa 02 lần vận chuyển  hàng hóa hoặc hành khách.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 15,
+    "question": "Đỗ xe được hiểu như thế nào là đúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là trạng thái đứng yên của xe có giới hạn thời gian trong một khoảng thời gian  cần thiết đủ để cho người lên, xuống xe đó, xếp dỡ hàng hóa hoặc thực hiện công  việc khác.",
+        "correct": false
+      },
+      {
+        "answer": "Là trạng thái đứng yên của xe không giới hạn thời gian. Khi đỗ xe, người điều  khiển phương tiện tham gia giao thông đường bộ chỉ được rời khỏi xe khi đã sử  dụng phanh đỗ xe hoặc thực hiện biện pháp an toàn khác. Xe đỗ trên đoạn đường  dốc phải đánh lái về phía lề đường, chèn bánh.",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 16,
+    "question": "Đường cao tốc được hiểu như thế nào là đúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là một cấp kỹ thuật của đường bộ, chỉ dành cho một số loại xe cơ giới, xe máy  chuyên dùng tham gia giao thông theo quy định của pháp luật. Có dải phân cách  phân chia hai chiều xe chạy riêng biệt, không giao nhau cùng mức với một hoặc  các đường khác, chỉ cho xe ra, vào ở những điểm nhất định. Có hàng rào bảo vệ,  trang thiết bị phục vụ, bảo đảm giao thông liên tục, an toàn, rút ngắn thời gian  hành trình.",
+        "correct": true
+      },
+      {
+        "answer": "Là đường nối liền Thủ đô Hà Nội với trung tâm hành chính cấp tỉnh; đường nối  liền các trung tâm hành chính cấp tỉnh; đường có vị trí quan trọng đối với sự phát  triển kinh tế- xã hội, bảo đảm quốc phòng, an ninh của vùng, khu vực.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 17,
+    "question": "Thiết bị an toàn cho trẻ em được hiểu như thế nào là đúng?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm  trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong  trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế  sự di chuyển của cơ thể trẻ em.",
+        "correct": true
+      },
+      {
+        "answer": "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế đứng hoặc nằm  trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong  trường hợp xe ô tô lưu thông bình thường.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 18,
+    "question": "Theo chức năng phục vụ thì đường bộ được phân loại như thế nào?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Đường chính, đường nhánh, đường gom, đường bên, đường dành cho giao  thông công cộng, đường nội bộ, đường dành riêng cho người đi bộ, người đi xe  đạp và các đường khác.",
+        "correct": true
+      },
+      {
+        "answer": ". Đường chính, đường nhánh, đường gom, đường dành cho giao thông công  cộng, đường nội bộ, đường dành riêng cho người đi bộ, người đi xe đạp và các  đường khác.",
+        "correct": false
+      },
+      {
+        "answer": "Đường chính, đường nhánh, đường gom, đường bên, đường dành cho giao thông  công cộng, đường dành riêng cho người đi bộ, người đi xe đạp và các đường khác.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 19,
+    "question": "Hành vi nào dưới đây bị nghiêm cấm?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Sử dụng xe đạp đi trên các tuyến quốc lộ.",
+        "correct": false
+      },
+      {
+        "answer": "Rải vật sắc nhọn, đổ chất gây trơn trượt trên đường bộ.",
+        "correct": true
+      },
+      {
+        "answer": "Cả hai ý trên.",
+        "correct": false
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  },
+  {
+    "numberOrder": 20,
+    "question": "Hành vi đưa xe cơ giới, xe máy chuyên dùng tham gia giao thông \nđường bộ nào dưới đây bị cấm?",
+    "urlImage": "",
+    "answers": [
+      {
+        "answer": "Không có chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường.",
+        "correct": false
+      },
+      {
+        "answer": "Hết niên hạn sử dụng.",
+        "correct": false
+      },
+      {
+        "answer": "Cả hai ý trên.",
+        "correct": true
+      },
+      {
+        "answer": "",
+        "correct": false
+      }
+    ],
+    "explanation": ""
+  }
 ]

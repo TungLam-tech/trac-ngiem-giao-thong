@@ -31,7 +31,7 @@ Promise.all([
 
     data2 = result2;
     dataQdc = data2.slice(startIndex, endIndex);
-    console.log(data1);
+
     main(); // gọi một lần duy nhất sau khi cả hai đã sẵn sàng
   })
   .catch((err) => {
@@ -47,6 +47,10 @@ const bienBao = $(".bienBao");
 const qdc = $(".qdc");
 const diemLiet = $(".diemLiet");
 
+//  back lại menu
+const menu = $(".menu");
+menu.addEventListener("click", backMenu);
+
 // function main  // giao dien ban dau nhat
 function main() {
   blockAnswer.classList.add("hide");
@@ -56,7 +60,6 @@ function main() {
   blockResult.classList.add("hide");
   showResultBtn.classList.add("hide");
   let100ToPass.classList.add("hide");
-
   // bien bao
   bienBao.addEventListener("click", () => {
     bienBao.classList.add("hide");
@@ -79,13 +82,17 @@ function main() {
     diemLiet.classList.add("hide");
   });
 }
-//  function quay lại main
-// const back = $(".backMain");
-// function backMain() {
-//   listQuestionBlock.innerHTML = "";
-// }
-// back.onclick = backMain;
-// function hiển thị số lượng bộ đề
+//  back lại menu
+
+function backMenu() {
+  listQuestionBlock.innerHTML = ``;
+  explanationLink.classList.add("hide");
+  alertYouChoose.classList.add("hide");
+  main();
+  bienBao.classList.remove("hide");
+  qdc.classList.remove("hide");
+  diemLiet.classList.remove("hide");
+}
 
 function createNumberOderQuestionSet(data) {
   let num = Math.ceil(data.length / 10); // luôn chuẩn rồi. ko được chỉnh, cứ thêm 10 câu hỏi thì tạo 1 bộ đề
@@ -109,9 +116,10 @@ const chooseListQuestionBtn = $(".btn-chooseListQuestion"); // nút chọn đề
 
 chooseListQuestionBtn.addEventListener("click", () => {
   soundClick.play();
-  start();
+  start(currentFullData); // ✅ dùng biến đang lưu loại đề hiện tại
   explanationLink.classList.add("hide");
 });
+
 // -------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------------
@@ -190,9 +198,10 @@ const letters = [`A`, `B`, `C`, `D`];
 const imgElement = $(".image");
 // -------------------------------------------------------------------
 // function init
+
 function init(begin) {
   listQuestionBlock.innerHTML = ""; // ẩn danh sách đề
-
+  blockQuestion.scrollIntoView(true);
   const currentQuestion = currentQuestionSet[begin];
 
   blockQuestion.innerText = `Câu số ${currentQuestion.numberOrder}: ${currentQuestion.question}`;
@@ -219,7 +228,6 @@ function reset() {
 }
 
 // function next question
-const stt = $(".stt");
 
 function next() {
   soundClick.play();
@@ -228,7 +236,6 @@ function next() {
   blockAnswer.classList.remove("visible");
   blockQuestion.classList.add("fade");
   blockAnswer.classList.add("fade");
-  stt.scrollIntoView(true);
   setTimeout(() => {
     begin++;
     init(begin);
@@ -253,68 +260,63 @@ const alertYouChoose = $(".alert-you-choose");
 
 blockChoice.forEach((choice, index) => {
   choice.addEventListener("click", () => {
-    //  only click once time
     if (isClick) return;
     isClick = true;
+
     alertYouChoose.innerText = `Bạn chọn ${letters[index]}`;
     alertYouChoose.classList.remove("hide");
-    // correct set green
-    if (dataOfQuestionSet[begin].answers[index].correct === true) {
-      soundCorrect.play();
 
+    const currentQuestion = currentQuestionSet[begin];
+
+    if (currentQuestion.answers[index].correct === true) {
+      soundCorrect.play();
       choice.classList.add("green-correct");
       alertCorrectOrIncorrect.innerText = " Đúng!";
       alertCorrectOrIncorrect.style.color = "#2fff00ff";
       alertCorrectOrIncorrect.classList.remove("hide");
       nextBtn.classList.remove("hide");
-      score++; // correct raise score by 1
-      alertCorrectOrIncorrect.scrollIntoView(true); // view focus in true or false
-
-      //  other incorrect set red
+      score++;
+      alertCorrectOrIncorrect.scrollIntoView(true);
     } else {
-      // add red incorrect
-
       choice.classList.add("red-incorrect");
-
       alertCorrectOrIncorrect.innerText = `Sai!`;
       alertCorrectOrIncorrect.style.color = "#ff9100ff";
       alertCorrectOrIncorrect.classList.remove("hide");
       nextBtn.classList.remove("hide");
       soundWrong.play();
 
-      // đặt ngay sau âm thanh để đồng bộ âm thanh và rung
       if ("vibrate" in navigator) {
         navigator.vibrate(100);
-      } // rung nhẹ 200ms
+      }
 
-      // add green correct
       blockChoice.forEach((otherChoice, otherIndex) => {
-        if (dataOfQuestionSet[begin].answers[otherIndex].correct === true) {
+        if (currentQuestion.answers[otherIndex].correct === true) {
           otherChoice.classList.add("green-correct");
         }
       });
-      alertCorrectOrIncorrect.scrollIntoView(true); //view focus in true or false
+
+      alertCorrectOrIncorrect.scrollIntoView(true);
     }
-    // Nếu chưa phải câu cuối
-    if (begin == dataOfQuestionSet.length - 1) {
+
+    if (begin === currentQuestionSet.length - 1) {
       showResultBtn.classList.remove("hide");
       nextBtn.classList.add("hide");
     }
-    //  đoạn này là phần hiển thị modal giải thích lời giải
+
     explanationLink.classList.remove("hide");
     explanationLink.onclick = () => {
       soundClick.play();
-      explanationImage.src = dataOfQuestionSet[begin].explanation;
+      explanationImage.src = currentQuestion.explanation;
       explanationModal.classList.remove("hide");
     };
-    //  đoạn này là click vào modal thì sẽ đóng lại modal
+
     explanationModal.addEventListener("click", () => {
       explanationModal.classList.add("hide");
     });
   });
 });
-// ------------------------------------------------------------------------------
-//  function see result
+
+// --------------------------------------------------------------------
 
 function showResult() {
   blockQuestion.classList.add("hide");
@@ -330,47 +332,45 @@ function showResult() {
 }
 
 showResultBtn.addEventListener("click", showResult);
-// -----------------------------------------------------------------
 
-// function nút làm lại
+// --------------------------------------------------------------------
 
 const closeAgainBtn = $(".btn-close");
 
 closeAgainBtn.addEventListener("click", () => {
   soundClick.play();
-  begin = 0; // quay về câu đầu
-  isClick = false; // cho phép click lại
+  begin = 0;
+  isClick = false;
   score = 0;
-  // ẩn phần kết quả
   blockResult.classList.add("hide");
 
-  // hiển thị lại các phần đã bị .hide
   blockQuestion.classList.remove("hide");
   blockChoice.forEach((choice) => choice.classList.remove("hide"));
   alertCorrectOrIncorrect.classList.remove("hide");
   showResultBtn.classList.remove("hide");
 
-  // khởi tạo lại quiz
   init(begin);
   reset();
 });
+
 // --------------------------------------------------------------------
 
-// function hien thi diem
 let percentScore = 0;
 const scoreBlock = $("#score");
 const paraScore = $(".para-score");
 const conclusionBlock = $(".conclusion");
+
 function showScore() {
-  percentScore = Math.round((score / dataOfQuestionSet.length) * 100);
+  percentScore = Math.round((score / currentQuestionSet.length) * 100);
   scoreBlock.innerText = `${percentScore}%`;
   scoreBlock.style.color = percentScore >= 80 ? "#3967e6ff" : "red";
-  paraScore.innerText = `Bạn đã trả lời đúng ${score} trên ${dataOfQuestionSet.length} câu hỏi`;
+  paraScore.innerText = `Bạn đã trả lời đúng ${score} trên ${currentQuestionSet.length} câu hỏi`;
 
   const selectedIndex = JSON.parse(localStorage.getItem("selected index"));
-  let allResults = JSON.parse(localStorage.getItem("pass")) || {}; // để lần 2 thì lại lấy lại
+  let allResults = JSON.parse(localStorage.getItem("pass")) || {};
   allResults[selectedIndex] = percentScore;
   localStorage.setItem("pass", JSON.stringify(allResults));
+
   if (percentScore === 100) {
     soundCheer.play();
   } else {
