@@ -49,6 +49,8 @@ const diemLiet = $(".diemLiet");
 
 //  back lại menu
 const menu = $(".menu");
+console.log(menu);
+
 menu.addEventListener("click", backMenu);
 
 // function main  // giao dien ban dau nhat
@@ -60,6 +62,7 @@ function main() {
   blockResult.classList.add("hide");
   showResultBtn.classList.add("hide");
   let100ToPass.classList.add("hide");
+  menu.style.display = "none";
   // bien bao
   bienBao.addEventListener("click", () => {
     bienBao.classList.add("hide");
@@ -75,7 +78,7 @@ function main() {
     start(data2); // dùng data2 cho quy định chung
   });
 
-  // diem liet
+  // diem liet chua co
   diemLiet.addEventListener("click", () => {
     bienBao.classList.add("hide");
     qdc.classList.add("hide");
@@ -131,6 +134,7 @@ function start(fullData) {
   currentQuestionSet = fullData.slice(startIndex, endIndex);
   listQuestionBlock.innerHTML = "";
   let100ToPass.classList.remove("hide");
+  menu.style.display = "block";
   createNumberOderQuestionSet(fullData);
 
   const listQuestion = $$(".list-question");
