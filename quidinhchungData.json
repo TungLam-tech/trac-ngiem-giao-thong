@@ -21,7 +21,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/1gt.png"
   },
   {
     "numberOrder": 2,
@@ -45,7 +45,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/2gt.png"
   },
   {
     "numberOrder": 3,
@@ -69,7 +69,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/3gt.png"
   },
   {
     "numberOrder": 4,
@@ -93,7 +93,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/4gt.png"
   },
   {
     "numberOrder": 5,
@@ -117,7 +117,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/5gt.png"
   },
   {
     "numberOrder": 6,
@@ -141,7 +141,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/6gt.png"
   },
   {
     "numberOrder": 7,
@@ -165,7 +165,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/7gt.png"
   },
   {
     "numberOrder": 8,
@@ -189,7 +189,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/8gt.png"
   },
   {
     "numberOrder": 9,
@@ -213,7 +213,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/9gt.png"
   },
   {
     "numberOrder": 10,
@@ -237,7 +237,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/10gt.png"
   },
   {
     "numberOrder": 11,
@@ -261,7 +261,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/11gt.png"
   },
   {
     "numberOrder": 12,
@@ -285,7 +285,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/12gt.png"
   },
   {
     "numberOrder": 13,
@@ -309,7 +309,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/13gt.png"
   },
   {
     "numberOrder": 14,
@@ -333,7 +333,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/14gt.png"
   },
   {
     "numberOrder": 15,
@@ -357,7 +357,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/15gt.png"
   },
   {
     "numberOrder": 16,
@@ -381,7 +381,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/16gt.png"
   },
   {
     "numberOrder": 17,
@@ -405,7 +405,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/17gt.png"
   },
   {
     "numberOrder": 18,
@@ -429,7 +429,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/18gt.png"
   },
   {
     "numberOrder": 19,
@@ -453,7 +453,7 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/19gt.png"
   },
   {
     "numberOrder": 20,
@@ -477,6 +477,6 @@
         "correct": false
       }
     ],
-    "explanation": ""
+    "explanation": "./image/20gt.png"
   }
 ]

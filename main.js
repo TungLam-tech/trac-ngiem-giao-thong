@@ -79,7 +79,7 @@ function main() {
   });
 
   // diem liet chua co
-  diemLiet.addEventListener("click", () => {
+  diemLiet.addEventListener("abc", () => {
     bienBao.classList.add("hide");
     qdc.classList.add("hide");
     diemLiet.classList.add("hide");
